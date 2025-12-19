@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline University Learning Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      line-height: 1.6;
+    }
+    header {
+      background: #0b5ed7;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #fff;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav button {
+      padding: 10px 15px;
+      border: none;
+      background: #0b5ed7;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    nav button:hover {
+      background: #084298;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #0b5ed7;
+    }
+    h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Offline University Learning Platform</h1>
+  <p>Full learning content for tertiary students – works offline after first load</p>
+</header>
+
+<nav>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('mining')">Sustainable Mining</button>
+  <button onclick="showSection('geology')">Geology</button>
+  <button onclick="showSection('chemistry')">Chemistry</button>
+  <button onclick="showSection('maths')">Mathematics</button>
+  <button onclick="showSection('english')">English</button>
+</nav>
+
+<div class="container">
+
+  <section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>This offline learning website is designed for university and tertiary students. All subjects are arranged clearly, with explanations like textbooks and practice questions at the end of each topic.</p>
+    <p>You can explore subjects freely without payment.</p>
+  </section>
+
+  <section id="mining">
+    <h2>Bachelor of Sustainable Mining</h2>
+
+    <h3>Introduction to Sustainable Mining</h3>
+    <p>Sustainable mining focuses on extracting minerals in a way that minimizes environmental damage, supports local communities, and ensures economic viability for future generations.</p>
+
+    <h3>Core Principles</h3>
+    <ul>
+      <li>Environmental protection</li>
+      <li>Resource efficiency</li>
+      <li>Community development</li>
+      <li>Health and safety</li>
+    </ul>
+
+    <h3>Practice Questions</h3>
+    <ol>
+      <li>Define sustainable mining.</li>
+      <li>List three principles of sustainable mining.</li>
+    </ol>
+  </section>
+
+  <section id="geology">
+    <h2>Geology</h2>
+
+    <h3>Earth Materials</h3>
+    <p>Geology studies the Earth, its materials, processes, and history. Rocks are classified into igneous, sedimentary, and metamorphic types.</p>
+
+    <h3>Rock Cycle</h3>
+    <p>The rock cycle explains how rocks change from one type to another through geological processes.</p>
+
+    <h3>Practice Questions</h3>
+    <ol>
+      <li>What are the three main rock types?</li>
+      <li>Explain the rock cycle.</li>
+    </ol>
+  </section>
+
+  <section id="chemistry">
+    <h2>Chemistry</h2>
+
+    <h3>Matter</h3>
+    <p>Matter is anything that has mass and occupies space. It exists in different states such as solid, liquid, and gas.</p>
+
+    <h3>Atomic Structure</h3>
+    <p>Atoms consist of protons, neutrons, and electrons. The arrangement of these particles determines the chemical behavior of elements.</p>
+
+    <h3>Practice Questions</h3>
+    <ol>
+      <li>Define matter.</li>
+      <li>Name the particles found in an atom.</li>
+    </ol>
+  </section>
+
+  <section id="maths">
+    <h2>Mathematics</h2>
+
+    <h3>Algebra</h3>
+    <p>Algebra deals with symbols and rules for manipulating those symbols to solve equations.</p>
+
+    <h3>Functions</h3>
+    <p>A function describes a relationship between inputs and outputs.</p>
+
+    <h3>Practice Questions</h3>
+    <ol>
+      <li>Solve: 2x + 4 = 10</li>
+      <li>Define a function.</li>
+    </ol>
+  </section>
+
+  <section id="english">
+    <h2>English for Academic Purposes</h2>
+
+    <h3>Academic Writing</h3>
+    <p>Academic writing is formal, clear, and structured. It includes essays, reports, and research papers.</p>
+
+    <h3>Reading Skills</h3>
+    <p>Critical reading helps students understand, analyze, and evaluate academic texts.</p>
+
+    <h3>Practice Questions</h3>
+    <ol>
+      <li>What is academic writing?</li>
+      <li>Why is critical reading important?</li>
+    </ol>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 Courage Azombila – Offline University Learning Platform</p>
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(sec => {
+      sec.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
