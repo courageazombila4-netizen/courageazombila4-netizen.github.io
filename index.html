@@ -51,6 +51,18 @@
     nav button:hover, nav button:focus {
       background: #084298;
     }
+    nav a.nav-link {
+      display: inline-block;
+      padding: 10px 12px;
+      background: #0b5ed7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    nav a.nav-link:hover, nav a.nav-link:focus {
+      background: #084298;
+    }
     .content {
       flex: 1;
     }
@@ -90,6 +102,28 @@
       margin-top: 20px;
       color: #333;
     }
+    .questions-toggle {
+      cursor: pointer;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #0b5ed7;
+      font-weight: 700;
+    }
+    .questions-toggle:focus {
+      outline: 2px solid #cfe0ff;
+      outline-offset: 2px;
+    }
+    .caret {
+      transition: transform 180ms ease;
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+    .questions {
+      margin-top: 10px;
+      transition: max-height 220ms ease, opacity 200ms ease;
+    }
     ul {
       margin-left: 20px;
     }
@@ -118,12 +152,12 @@
 <div class="main-layout">
   <aside class="sidebar" aria-label="Subjects navigation">
     <nav>
-      <button onclick="showSection('home')">Home</button>
-      <button onclick="showSection('mining')">Bachelor of Sustainable Mining</button>
-      <button onclick="showSection('geology')">Geology</button>
-      <button onclick="showSection('chemistry')">Chemistry</button>
-      <button onclick="showSection('maths')">Mathematics</button>
-      <button onclick="showSection('english')">English for Academic Purposes</button>
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="programmes.html">Bachelor of Sustainable Mining</a>
+      <a class="nav-link" href="geology.html">Geology</a>
+      <a class="nav-link" href="chemistry.html">Chemistry</a>
+      <a class="nav-link" href="maths.html">Mathematics</a>
+      <a class="nav-link" href="english.html">English for Academic Purposes</a>
     </nav>
   </aside>
 
@@ -134,157 +168,15 @@
         <h2 class="program-title">Welcome</h2>
         <p>This offline learning website is designed for university and tertiary students. All subjects are arranged clearly with step-by-step explanations, learning outcomes, modules, assessments and practice questions at the end of each topic.</p>
         <p>Explore subjects freely; content caches for offline use after first load.</p>
-      </section>
 
-      <section id="mining">
-        <h2 class="program-title">Bachelor of Sustainable Mining <span class="program-badge">Program</span></h2>
-        <h3>Overview</h3>
-        <p>This programme trains students to manage mineral extraction with minimal environmental impact, social responsibility, and economic sustainability.</p>
-
-        <h3>Learning Outcomes</h3>
+        <h3>Quick Links</h3>
         <ul>
-          <li>Understand mine lifecycle planning and rehabilitation.</li>
-          <li>Apply environmental management techniques and monitoring.</li>
-          <li>Assess socio-economic impacts and stakeholder engagement.</li>
+          <li><a href="programmes.html">Bachelor of Sustainable Mining (Program page)</a></li>
+          <li><a href="geology.html">Geology (Subject page)</a></li>
+          <li><a href="chemistry.html">Chemistry (Subject page)</a></li>
+          <li><a href="maths.html">Mathematics (Subject page)</a></li>
+          <li><a href="english.html">English for Academic Purposes (Subject page)</a></li>
         </ul>
-
-        <h3>Core Modules</h3>
-        <ol>
-          <li>Mineral Economics</li>
-          <li>Mine Design & Planning</li>
-          <li>Environmental Management</li>
-          <li>Occupational Health & Safety</li>
-        </ol>
-
-        <h3>Duration & Entry</h3>
-        <p>Typically 3-4 years full-time. Entry: secondary school certificate with relevant science subjects.</p>
-
-        <h3>Assessment</h3>
-        <p>Combination of assignments, field reports, practical labs, and final exams.</p>
-
-        <h3>Resources</h3>
-        <ul>
-          <li>Lecture notes and field guides</li>
-          <li>Case studies on mine rehabilitation</li>
-          <li>Data sets for practical exercises</li>
-        </ul>
-
-        <h3>Practice Questions</h3>
-        <ol>
-          <li>Explain three strategies for reducing environmental impact of mining.</li>
-          <li>Outline the steps in planning a small-scale mine rehabilitation.</li>
-        </ol>
-      </section>
-
-      <section id="geology">
-        <h2 class="program-title">Geology <span class="program-badge">Subject</span></h2>
-        <h3>Overview</h3>
-        <p>Geology studies Earth materials, processes and history. It provides the foundation for mineral exploration, environmental assessment and geotechnical engineering.</p>
-
-        <h3>Learning Outcomes</h3>
-        <ul>
-          <li>Identify common minerals and rock types.</li>
-          <li>Interpret geological maps and cross-sections.</li>
-          <li>Explain geological processes such as volcanism and sedimentation.</li>
-        </ul>
-
-        <h3>Modules</h3>
-        <ol>
-          <li>Mineralogy</li>
-          <li>Petrology</li>
-          <li>Structural Geology</li>
-          <li>Field Mapping</li>
-        </ol>
-
-        <h3>Assessment</h3>
-        <p>Lab work, field reports, map exercises and written exams.</p>
-
-        <h3>Practice Questions</h3>
-        <ol>
-          <li>List and describe the three main rock types.</li>
-          <li>Draw a simple rock cycle and explain each transition.</li>
-        </ol>
-      </section>
-
-      <section id="chemistry">
-        <h2 class="program-title">Chemistry <span class="program-badge">Subject</span></h2>
-        <h3>Overview</h3>
-        <p>Covers fundamental principles of matter, reactions and laboratory practice essential for many science and engineering fields.</p>
-
-        <h3>Learning Outcomes</h3>
-        <ul>
-          <li>Understand atomic structure and the periodic table.</li>
-          <li>Perform basic quantitative calculations and lab techniques.</li>
-          <li>Predict reaction behavior and balances.</li>
-        </ul>
-
-        <h3>Modules</h3>
-        <ol>
-          <li>General Chemistry</li>
-          <li>Organic Chemistry Basics</li>
-          <li>Analytical Techniques</li>
-        </ol>
-
-        <h3>Assessment</h3>
-        <p>Laboratory reports, quizzes and theory exams.</p>
-
-        <h3>Practice Questions</h3>
-        <ol>
-          <li>Define matter and list its common states.</li>
-          <li>Describe the structure of an atom.</li>
-        </ol>
-      </section>
-
-      <section id="maths">
-        <h2 class="program-title">Mathematics <span class="program-badge">Subject</span></h2>
-        <h3>Overview</h3>
-        <p>Mathematics provides tools for modelling, analysis and problem solving used across engineering, sciences and economics.</p>
-
-        <h3>Learning Outcomes</h3>
-        <ul>
-          <li>Solve algebraic and calculus problems.</li>
-          <li>Model relationships using functions.</li>
-          <li>Apply basic statistics for data analysis.</li>
-        </ul>
-
-        <h3>Modules</h3>
-        <ol>
-          <li>Algebra & Trigonometry</li>
-          <li>Calculus</li>
-          <li>Linear Algebra</li>
-        </ol>
-
-        <h3>Practice Questions</h3>
-        <ol>
-          <li>Solve: 2x + 4 = 10</li>
-          <li>Give the definition of a function and an example.</li>
-        </ol>
-      </section>
-
-      <section id="english">
-        <h2 class="program-title">English for Academic Purposes <span class="program-badge">Subject</span></h2>
-        <h3>Overview</h3>
-        <p>Focuses on academic reading, writing, and presentation skills required for success in tertiary education.</p>
-
-        <h3>Learning Outcomes</h3>
-        <ul>
-          <li>Write clear, structured academic essays.</li>
-          <li>Evaluate and summarise academic texts.</li>
-          <li>Present arguments coherently in spoken form.</li>
-        </ul>
-
-        <h3>Modules</h3>
-        <ol>
-          <li>Academic Writing</li>
-          <li>Reading & Critical Thinking</li>
-          <li>Presentation Skills</li>
-        </ol>
-
-        <h3>Practice Questions</h3>
-        <ol>
-          <li>What is academic writing and what features distinguish it?</li>
-          <li>Explain the value of critical reading in research.</li>
-        </ol>
       </section>
 
     </div>
@@ -301,6 +193,26 @@
       sec.classList.remove('active');
     });
     document.getElementById(id).classList.add('active');
+  }
+  function toggleQuestions(el) {
+    const qs = el.nextElementSibling;
+    if (!qs) return;
+    const isHidden = qs.hasAttribute('hidden');
+    if (isHidden) {
+      qs.removeAttribute('hidden');
+      el.setAttribute('aria-expanded', 'true');
+      const caret = el.querySelector('.caret'); if (caret) caret.style.transform = 'rotate(90deg)';
+    } else {
+      qs.setAttribute('hidden', '');
+      el.setAttribute('aria-expanded', 'false');
+      const caret = el.querySelector('.caret'); if (caret) caret.style.transform = '';
+    }
+  }
+  function toggleQuestionsKey(e, el) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleQuestions(el);
+    }
   }
 </script>
 
