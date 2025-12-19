@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bachelor of Sustainable Mining — Offline University</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f4f6f8; line-height:1.6 }
+    header { background:#0b5ed7; color:#fff; padding:18px; text-align:center }
+    .container { max-width:900px; margin:20px auto; padding:16px }
+    .program-title { color:#0b5ed7; font-size:1.4rem }
+    .program-badge { background:#e9f2ff; color:#0b5ed7; font-size:0.75rem; padding:3px 8px; border-radius:12px; margin-left:10px }
+    a.back { display:inline-block; margin-bottom:12px; color:#0b5ed7; text-decoration:none; font-weight:700 }
+    .questions-toggle { cursor:pointer; user-select:none; display:inline-flex; align-items:center; gap:8px; color:#0b5ed7; font-weight:700 }
+    .caret { transition: transform 180ms ease }
+    .questions { margin-top:10px }
+    footer { text-align:center; padding:15px; background:#222; color:#fff; margin-top:30px }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bachelor of Sustainable Mining</h1>
+  <p>Program page — Offline University Learning Platform</p>
+</header>
+
+<main class="container">
+  <a class="back" href="index.html">← Back to Home</a>
+
+  <h2 class="program-title">Bachelor of Sustainable Mining <span class="program-badge">Program</span></h2>
+  <h3>Overview</h3>
+  <p>This programme trains students to manage mineral extraction with minimal environmental impact, social responsibility, and economic sustainability.</p>
+
+  <h3>Learning Outcomes</h3>
+  <ul>
+    <li>Understand mine lifecycle planning and rehabilitation.</li>
+    <li>Apply environmental management techniques and monitoring.</li>
+    <li>Assess socio-economic impacts and stakeholder engagement.</li>
+  </ul>
+
+  <h3>Core Modules</h3>
+  <ol>
+    <li>Mineral Economics</li>
+    <li>Mine Design & Planning</li>
+    <li>Environmental Management</li>
+    <li>Occupational Health & Safety</li>
+  </ol>
+
+  <h3>Duration & Entry</h3>
+  <p>Typically 3-4 years full-time. Entry: secondary school certificate with relevant science subjects.</p>
+
+  <h3>Assessment</h3>
+  <p>Combination of assignments, field reports, practical labs, and final exams.</p>
+
+  <h3>Resources</h3>
+  <ul>
+    <li>Lecture notes and field guides</li>
+    <li>Case studies on mine rehabilitation</li>
+    <li>Data sets for practical exercises</li>
+  </ul>
+
+  <h3 class="questions-toggle" tabindex="0" role="button" aria-expanded="false" onclick="toggleQuestions(this)" onkeydown="toggleQuestionsKey(event,this)">Practice Questions <span class="caret">▸</span></h3>
+  <div class="questions" hidden>
+    <ol>
+      <li>Explain three strategies for reducing environmental impact of mining.</li>
+      <li>Outline the steps in planning a small-scale mine rehabilitation.</li>
+    </ol>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 Courage Azombila – Offline University Learning Platform</p>
+</footer>
+
+<script>
+  function toggleQuestions(el) {
+    const qs = el.nextElementSibling;
+    if (!qs) return;
+    const isHidden = qs.hasAttribute('hidden');
+    if (isHidden) {
+      qs.removeAttribute('hidden');
+      el.setAttribute('aria-expanded', 'true');
+      const caret = el.querySelector('.caret'); if (caret) caret.style.transform = 'rotate(90deg)';
+    } else {
+      qs.setAttribute('hidden', '');
+      el.setAttribute('aria-expanded', 'false');
+      const caret = el.querySelector('.caret'); if (caret) caret.style.transform = '';
+    }
+  }
+  function toggleQuestionsKey(e, el) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleQuestions(el);
+    }
+  }
+</script>
+
+</body>
+</html>
