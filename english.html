@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English for Academic Purposes — Offline University</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f4f6f8; line-height:1.6 }
+    header { background:#0b5ed7; color:#fff; padding:18px; text-align:center }
+    .container { max-width:900px; margin:20px auto; padding:16px }
+    .program-title { color:#0b5ed7; font-size:1.4rem }
+    .program-badge { background:#e9f2ff; color:#0b5ed7; font-size:0.75rem; padding:3px 8px; border-radius:12px; margin-left:10px }
+    a.back { display:inline-block; margin-bottom:12px; color:#0b5ed7; text-decoration:none; font-weight:700 }
+    .questions-toggle { cursor:pointer; user-select:none; display:inline-flex; align-items:center; gap:8px; color:#0b5ed7; font-weight:700 }
+    .caret { transition: transform 180ms ease }
+    .questions { margin-top:10px }
+    footer { text-align:center; padding:15px; background:#222; color:#fff; margin-top:30px }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>English for Academic Purposes</h1>
+  <p>Subject page — Offline University Learning Platform</p>
+</header>
+
+<main class="container">
+  <a class="back" href="index.html">← Back to Home</a>
+
+  <h2 class="program-title">English for Academic Purposes <span class="program-badge">Subject</span></h2>
+  <h3>Overview</h3>
+  <p>Focuses on academic reading, writing, and presentation skills required for success in tertiary education.</p>
+
+  <h3>Learning Outcomes</h3>
+  <ul>
+    <li>Write clear, structured academic essays.</li>
+    <li>Evaluate and summarise academic texts.</li>
+    <li>Present arguments coherently in spoken form.</li>
+  </ul>
+
+  <h3>Modules</h3>
+  <ol>
+    <li>Academic Writing</li>
+    <li>Reading & Critical Thinking</li>
+    <li>Presentation Skills</li>
+  </ol>
+
+  <h3 class="questions-toggle" tabindex="0" role="button" aria-expanded="false" onclick="toggleQuestions(this)" onkeydown="toggleQuestionsKey(event,this)">Practice Questions <span class="caret">▸</span></h3>
+  <div class="questions" hidden>
+    <ol>
+      <li>What is academic writing and what features distinguish it?</li>
+      <li>Explain the value of critical reading in research.</li>
+    </ol>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 Courage Azombila – Offline University Learning Platform</p>
+</footer>
+
+<script>
+  function toggleQuestions(el) {
+    const qs = el.nextElementSibling;
+    if (!qs) return;
+    const isHidden = qs.hasAttribute('hidden');
+    if (isHidden) {
+      qs.removeAttribute('hidden');
+      el.setAttribute('aria-expanded', 'true');
+      const caret = el.querySelector('.caret'); if (caret) caret.style.transform = 'rotate(90deg)';
+    } else {
+      qs.setAttribute('hidden', '');
+      el.setAttribute('aria-expanded', 'false');
+      const caret = el.querySelector('.caret'); if (caret) caret.style.transform = '';
+    }
+  }
+  function toggleQuestionsKey(e, el) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleQuestions(el);
+    }
+  }
+</script>
+
+</body>
+</html>
